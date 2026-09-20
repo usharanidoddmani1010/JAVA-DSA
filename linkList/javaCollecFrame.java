@@ -1,8 +1,4 @@
 import java.util.LinkedList;
-
-import linkList.linkListBase.Node;
-
-
 public class javaCollecFrame {
 
     
