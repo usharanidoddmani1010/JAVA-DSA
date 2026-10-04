@@ -467,6 +467,12 @@ public class linkListBase {
         }
 
     }
+
+    // circular ll
+
+    public static void circularLL(){
+        
+    }
     public static void main(String[] args) {
         linkListBase ll = new linkListBase();
         // ll.head=new Node(1);
