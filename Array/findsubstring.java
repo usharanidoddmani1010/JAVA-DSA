@@ -1,3 +1,4 @@
+package Array;
 public class findsubstring {
     public static void fs(String str, String ans, int i){
         //base cond

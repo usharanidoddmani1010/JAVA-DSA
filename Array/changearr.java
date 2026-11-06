@@ -1,3 +1,4 @@
+package Array;
 public class changearr {
     
     public static void changeArr(int arr[], int i, int val) {

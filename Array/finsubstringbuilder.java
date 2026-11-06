@@ -1,3 +1,4 @@
+package Array;
 public class finsubstringbuilder {
     public static void finsubstring_builder(StringBuilder str, StringBuilder ans, Integer i){
         if(i==str.length()){

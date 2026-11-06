@@ -1,22 +1,20 @@
+package Array;
 import java.util.Arrays;
-
-public class inversioncount {
-    public static int mergesort(int a[],int si, int ei){
+public class merge {
+    public static void mergesort(int a[],int si, int ei){
         if(si>=ei){
-            return 0;
+            return ;
         }
         int mid=si+(ei-si)/2;
-        int invleft=mergesort(a, si, mid);
-        int invright=mergesort(a, mid+1, ei);
-        int invmerge=mergeall(a, si,mid,ei);
-        return invleft+invright+invmerge;
+        mergesort(a, si, mid);
+        mergesort(a, mid+1, ei);
+        mergeall(a, si,mid,ei);
     }
-    public static int mergeall(int a[],int si,int mid, int ei){
+    public static void mergeall(int a[],int si,int mid, int ei){
         int tem[]=new int[ei-si+1];
         int i=si;
         int j=mid+1;
         int k=0;
-        int inversion=0;
         while(i<=mid && j<=ei){
             if(a[i]<=a[j]){
                 tem[k]=a[i];
@@ -25,7 +23,6 @@ public class inversioncount {
             else{
                 tem[k]=a[j];
                 j++;
-                inversion+=(mid-i+1);
             }
             k++;
 
@@ -41,14 +38,12 @@ public class inversioncount {
         for (int ar = 0, b = si; ar < tem.length; ar++, b++) {
             a[b] = tem[ar];
         }
-        return inversion;
     }
 
     public static void main(String args[]){
-        int a[]={6,3,2,5,4};
-        int m=mergesort(a,0,a.length-1);
+        int a[]={2,0,7,5,9,6,1};
+        mergesort(a,0,a.length-1);
         System.out.println(Arrays.toString(a));
-        System.out.println(m);
     }
-    
+        
 }

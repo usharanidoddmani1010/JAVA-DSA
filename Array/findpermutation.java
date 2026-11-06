@@ -1,3 +1,4 @@
+package Array;
 public class findpermutation{
     public static void findpermution(String str, String ans){
         // base condition
